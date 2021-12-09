@@ -23,9 +23,9 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
-    - name: Official SonarQube Scan
+    - name: SonarCloud Scan
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: "https://sonarcloud.io"
-      uses: SonarSource/sonarqube-scan-action@v1.0.0
+      uses: SonarSource/sonarcloud-github-action@v1.6
