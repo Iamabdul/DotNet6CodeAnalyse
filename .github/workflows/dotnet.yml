@@ -31,5 +31,5 @@ jobs:
       uses: SonarSource/sonarcloud-github-action@v1.6
       with:
         args: 
-          sonar.organization="iamabdul"
-          sonar.projectKey="Iamabdul_DotNet6CodeAnalyse"
+          -Dsonar.organization="iamabdul"
+          -Dsonar.projectKey="Iamabdul_DotNet6CodeAnalyse"
